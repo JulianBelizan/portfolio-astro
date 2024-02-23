@@ -1,11 +1,81 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
+import Cv from "../components/icons/Cv.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
+import Proyectos from "../components/icons/Proyectos.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		
-	</main>
-</Layout>
+<Layout 
+title="Portfolio de Julian - Desarrollador y Programador Web"
+description="Contrata a Julian"
+>
+  <main class="px-4">
+    <SectionContainer class="py-40 pb-24">
+      <div class="max-w-xl">
+        <div class="flex gap-4 mb-4">
+          <img
+            class="rounded-full shadow-lg size-20"
+            src="/photo/yo1.webp"
+            alt=
+          />
+          <a
+            href="https://linkedin.com/in/midudev"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center transition md:justify-center md:hover:scale-105"
+          >
+            <Badge>Disponible para trabajar</Badge>
+          </a>
+        </div>
+      </h1>
+      <h2 class="text-2xl opacity:80 text-wrap">
+        Desarrollador Web. Apasionado por  la creación de aplicaciones de navegador y experiencias en línea. Made in <span class="bg-gradient-to-r from-blue-500 via-yellow-500 to-blue-500 text-transparent bg-clip-text">Cordoba, Argentina</span>
+		<hr>
+		<span class="text-sm">El cielo es el limite dicen, pero en el mundo de la tecnologia no creo que lo haya.</span>
+      </h2>
 
+      <nav class="flex gap-4 mt-8 flex-wrap">
+		<SocialPill href="https://www.linkedin.com/in/julianbelizan/">
+			<LinkedIn class="size-9 lg:size-6"/>
+			LinkedIn
+		</SocialPill>
+		<SocialPill href="https://github.com/JulianBelizan">
+			<GitHub class="size-9 lg:size-6"/>
+			GitHub
+		</SocialPill>
+		<SocialPill href="https://mail.google.com/mail/?view=cm&fs=1&to=julianignaciobelizan@gmail.com&su=Estoy+interesado+en+tu+perfil+!">
+			<Mail class="size-9 lg:size-6"/>
+			Contacto
+		</SocialPill>
+		<SocialPill href="https://drive.google.com/file/d/1h1xaE88jNl6B7yv-YhQJrXThLZWLLKww/view?usp=sharing">
+			<Cv class="size-9 lg:size-6"/>
+			Curriculum
+		</SocialPill>
+	  </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Proyectos class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>
