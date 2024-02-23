@@ -1,16 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import GitHub from "../components/icons/GitHub.astro";
-import Mail from "../components/icons/Mail.astro";
-import Cv from "../components/icons/Cv.astro";
-import SocialPill from "../components/SocialPill.astro";
+import AcercaDe from "../components/AcercaDe.astro"
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import Proyectos from "../components/icons/Proyectos.astro";
 import Projects from "../components/Projects.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout 
@@ -18,64 +15,37 @@ title="Portfolio de Julian - Desarrollador y Programador Web"
 description="Contrata a Julian"
 >
   <main class="px-4">
-    <SectionContainer class="py-40 pb-24">
-      <div class="max-w-xl">
-        <div class="flex gap-4 mb-4">
-          <img
-            class="rounded-full shadow-lg size-20"
-            src="/photo/yo1.webp"
-            alt=
-          />
-          <a
-            href="https://www.linkedin.com/in/julianbelizan/"
-            target="_blank"
-            rel="noopener"
-            class="flex items-center transition md:justify-center md:hover:scale-105"
-          >
-            <Badge>Disponible para trabajar</Badge>
-          </a>
-        </div>
-      </h1>
-      <h2 class="text-2xl opacity:80 text-wrap">
-        Desarrollador Web. Apasionado por  la creación de aplicaciones de navegador y experiencias en línea. Made in <span class="bg-gradient-to-r from-blue-500 via-yellow-500 to-blue-500 text-transparent bg-clip-text">Cordoba, Argentina</span>
-		<hr>
-		<span class="text-sm">El cielo es el limite dicen, pero en el mundo de la tecnologia no creo que lo haya.</span>
-      </h2>
-
-      <nav class="flex gap-4 mt-8 flex-wrap">
-		<SocialPill href="https://www.linkedin.com/in/julianbelizan/">
-			<LinkedIn class="size-9 lg:size-4"/>
-			LinkedIn
-		</SocialPill>
-		<SocialPill href="https://github.com/JulianBelizan">
-			<GitHub class="size-9 lg:size-4"/>
-			GitHub
-		</SocialPill>
-		<SocialPill href="https://mail.google.com/mail/?view=cm&fs=1&to=julianignaciobelizan@gmail.com&su=Estoy+interesado+en+tu+perfil+!">
-			<Mail class="size-9 lg:size-4"/>
-			Contacto
-		</SocialPill>
-		<SocialPill href="https://drive.google.com/file/d/1h1xaE88jNl6B7yv-YhQJrXThLZWLLKww/view?usp=sharing">
-			<Cv class="size-9 lg:size-4"/>
-			Curriculum
-		</SocialPill>
-	  </nav>
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+        </slot>
+      </Hero>
     </SectionContainer>
 
-    <SectionContainer class="mt-4" id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefCase class="size-7" />
-        Experiencia laboral
-      </h2>
-      <Experience />
-    </SectionContainer>
+      <SectionContainer id="experiencia">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <BriefCase class="size-7" />
+          Experiencia laboral
+        </h2>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <Proyectos class="size-7" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="proyectos">
+        <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+          <Proyectos class="size-7" />
+          Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer class="mt-10" id="sobre-mi">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+        >
+          <ProfileCheck class="size-8" />
+       <span class="text-white">Acerca de mi</span>
+        </h2>
+        <AcercaDe />
+      </SectionContainer>
+
   </main>
 </Layout>

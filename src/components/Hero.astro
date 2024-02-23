@@ -1,0 +1,54 @@
+---
+import Badge from "./Badge.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import GitHub from "../components/icons/GitHub.astro";
+import Cv from "../components/icons/Cv.astro";
+import SocialPill from "./SocialPill.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-xl shadow-lg size-16"
+      src="/photo/Yo.webp"
+      alt=
+    />
+    <a
+      href="https://www.linkedin.com/in/julianbelizan/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl "
+  >
+   Bienvenido a mi portfolio !
+  </h1>
+  <p
+    class="mt-6 text-xl text-indigo-800 font-semibold "
+  >
+  Desarrollador Web. Apasionado por  la creación de aplicaciones de navegador y experiencias en línea. Made in <span class="bg-gradient-to-r from-blue-500 via-yellow-500 to-blue-500 text-transparent bg-clip-text">Cordoba, Argentina</span>
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="https://github.com/JulianBelizan">
+      <GitHub class="size-4" />
+      GitHub
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/julianbelizan/">
+    <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://mail.google.com/mail/?view=cm&fs=1&to=julianignaciobelizan@gmail.com&su=Estoy+interesado+en+tu+perfil+!">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://drive.google.com/file/d/1h1xaE88jNl6B7yv-YhQJrXThLZWLLKww/view?usp=sharing">
+    <Cv class="size-4" />
+      Curriculum
+    </SocialPill>
+  </nav>
+</div>
